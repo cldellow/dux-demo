@@ -8,5 +8,5 @@ python3 -mvenv venv
 pip install datasette
 datasette install datasette-ui-extras datasette-publish-fly
 cp ~/src/stackexchange-to-sqlite/stack.db cooking.db
-datasette publish fly cooking.db --app="dux-demo"--install datasette-ui-extras --metadata metadata.json
+datasette publish fly cooking.db superuser.db --app="dux-demo"--install datasette-ui-extras --metadata metadata.json --plugins-dir plugins --setting facet_time_limit_ms 1000 --setting sql_time_limit_ms 1000
 ```
