@@ -28,5 +28,12 @@
             }
         }
 
+    },
+    "plugins": {
+        "datasette-parquet": {
+            "parquet": {
+                "directory": "/data/parquet"
+            }
+        }
     }
 }
