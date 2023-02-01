@@ -26,8 +26,21 @@
                     "label_column": "display_name"
                 }
             }
+        },
+        "geonames": {
+            "queries": {
+                "geonames_stats": {
+                    "sql": "select country, count(distinct name || admin1) as num_cities, count(distinct admin1) as num_regions, min(population) as smallest_city, max(population) as biggest_city, sum(population) as population from geonames group by 1 order by 1"
+                }
+            }
+        },
+        "parquet": {
+            "queries": {
+                "geonames_stats": {
+                    "sql": "select country, count(distinct name || admin1) as num_cities, count(distinct admin1) as num_regions, min(population) as smallest_city, max(population) as biggest_city, sum(population) as population from geonames group by 1 order by 1"
+                }
+            }
         }
-
     },
     "plugins": {
         "datasette-parquet": {
