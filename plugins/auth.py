@@ -7,4 +7,8 @@ def actor_from_request(request):
     qs = parse_qs(url.query)
 
     if '_whoami' in qs and len(qs['_whoami']) == 1:
-        return {'id': qs['_whoami'][0]}
+        user = qs['_whoami'][0]
+
+        if user == 'root':
+            user = 'not-root'
+        return {'id': user}
