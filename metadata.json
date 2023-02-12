@@ -43,6 +43,10 @@
         }
     },
     "plugins": {
+        "datasette-auth-github": {
+            "client_id": "f004aeec539e918f86bc",
+            "client_secret": {"$env": "GITHUB_CLIENT_SECRET"}
+        },
         "datasette-parquet": {
             "parquet": {
                 "directory": "/data/parquet"
