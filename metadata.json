@@ -1,11 +1,7 @@
 {
-    "title": "Stack Exchange Databases",
+    "title": "datasette-ui-extras Demo",
     "license": " CC BY-SA 2.5 / CC-BY-SA 3.0",
-    "license_url": "https://stackoverflow.com/help/licensing",
-    "source": "Stack Overflow",
-    "source_url": "https://meta.stackexchange.com/questions/198915/is-there-a-direct-download-link-with-a-raw-data-dump-of-stack-overflow-not-a-t",
-    "about": "stackexchange-datasette",
-    "about_url": "https://github.com/cldellow/stackexchange-to-sqlite",
+    "source": "Stack Overflow, GeoNames",
     "databases": {
         "cooking": {
             "tables": {
@@ -15,7 +11,19 @@
                 "users": {
                     "label_column": "display_name"
                 }
+            },
+            "permissions": {
+                "insert-row": {
+                    "gh_id": "*"
+                },
+                "update-row": {
+                    "gh_id": "*"
+                },
+                "delete-row": {
+                    "gh_id": "*"
+                }
             }
+
         },
         "superuser": {
             "tables": {

@@ -1,0 +1,23 @@
+{% extends "default:index.html" %}
+
+
+{% block description_source_license %}
+<em>{% include "_description_source_license.html" %}</em>
+<style>
+ul.notes {
+  list-style-type: disc;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+ul.notes li {
+  margin-left: 1em;
+}
+</style>
+<p>This server is a demonstration Datasette instance. It showcases the following Datasette plugins:</p>
+<ul class='notes'>
+  <li><a href="https://github.com/cldellow/datasette-ui-extras">datasette-ui-extras</a>, for power-user browsing and editing UI</li>
+  <li><a href="https://github.com/cldellow/datasette-parquet">datasette-parquet</a>, for serving Parquet, CSV, JSON and DuckDB files</li>
+  <li><a href="https://github.com/cldellow/datasette-current-actor">datasette-current-actor</a>, for auditing changes to database tables</li>
+</ul>
+<p>Anyone may <a href="https://dux.fly.dev/-/github-auth-start">log in with a GitHub account</a>. Logged-in users can edit tables in the <b>cooking</b> database.</p>
+{% endblock %}
