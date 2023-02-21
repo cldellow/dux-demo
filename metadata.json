@@ -6,10 +6,18 @@
         "cooking": {
             "tables": {
                 "badges": {
-                    "facets": ["name"]
+                    "facets": ["name"],
+                    "label_column": "id"
                 },
                 "users": {
                     "label_column": "display_name"
+                },
+                "posts": {
+                    "plugins": {
+                        "datasette-ui-extras": {
+                            "omnisearch-columns": ["post_type", "owner_user_id", "tags", "title"]
+                        }
+                    }
                 }
             },
             "permissions": {
@@ -28,10 +36,18 @@
         "superuser": {
             "tables": {
                 "badges": {
-                    "facets": ["name"]
+                    "facets": ["name"],
+                    "label_column": "id"
                 },
                 "users": {
                     "label_column": "display_name"
+                },
+                "posts": {
+                    "plugins": {
+                        "datasette-ui-extras": {
+                            "omnisearch-columns": ["post_type", "owner_user_id", "tags", "title"]
+                        }
+                    }
                 }
             }
         },
